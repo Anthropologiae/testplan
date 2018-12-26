@@ -1,6 +1,7 @@
 package Main;
 
 import methods.methods;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 
@@ -9,8 +10,7 @@ public class test1  {
 
 public static methods mt = new methods();
 
-
-    @Test
+    @BeforeClass
     public static void  test () throws InterruptedException {
 
 
@@ -22,7 +22,7 @@ public static methods mt = new methods();
 
         mt.down();
 
-
+        mt.open("");
 
 
 

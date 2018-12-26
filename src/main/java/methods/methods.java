@@ -11,6 +11,8 @@ public class methods extends parcer {
 
     public static WebDriver driver;
 
+    public WebElement element;
+
 
 
 
@@ -34,9 +36,12 @@ public class methods extends parcer {
     }
 
     public void click(String xpath){
-
-        driver.findElement(new By.ByXPath(but)).click();
-
+        try {
+            driver.findElement(new By.ByXPath(but)).click();
+        }
+        catch (Exception e){
+            System.out.println("Ошибка при нажатии кнопки");
+        }
     }
 
     public void vait (String xpath) throws InterruptedException {
@@ -50,11 +55,28 @@ public class methods extends parcer {
     }
 
     public void scroll(){
-        WebElement scr = driver.findElement(By.xpath(xpath));
-        Actions act = new Actions(driver);
-        act.moveToElement(scr);
-        act.perform();
+
+        try {
+            element = driver.findElement(By.xpath(xpath));
+            Actions act = new Actions(driver);
+            act.moveToElement(element);
+            act.perform();
+        }
+        catch(Exception e){
+            System.out.println("Ошибка при надатии кнопки");
+        }
     }
+
+    public void open (String Url) {
+        driver.get(url);
+    }
+
+    public void input (String inpt) {
+
+       element = driver.findElement(new By.ByXPath(input));
+
+    }
+
 
 
 
