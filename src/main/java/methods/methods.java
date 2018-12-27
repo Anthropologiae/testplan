@@ -38,14 +38,12 @@ public class methods extends parcer {
     }
 
     public void click(String path){
-        try {
+
             element = driver.findElement(By.xpath(path));
             //element = driver.findElement(new By.ByXPath(xpath));
                     element.click();
-        }
-        catch (Exception e){
-            System.out.println("Ошибка при нажатии кнопки");
-        }
+           // System.out.println("Ошибка при нажатии кнопки");
+
     }
 
     public void wait (String mill) throws InterruptedException {
@@ -62,16 +60,16 @@ public class methods extends parcer {
 
     public void scroll(String scroll){
 
-        try {
+
             element = driver.findElement(By.xpath(scroll));
             //element = driver.findElement(new By.ByXPath(xpath));
             Actions act = new Actions(driver);
             act.moveToElement(element);
             act.perform();
-        }
-        catch(Exception e){
-            System.out.println("Ошибка при скроле страницы");
-        }
+
+
+          //  System.out.println("Ошибка при скроле страницы");
+
     }
 
     public void open (String Url) {

@@ -21,9 +21,9 @@ public class First extends methods{
 
         ms.start("https://edunavi.online/");
 
-        ms.down();
-
         ms.scroll("//h2[@class='heading heading--big-font'][contains(.,'Спецпроект')]");
+
+        ms.down();
 
 
     }
@@ -31,8 +31,6 @@ public class First extends methods{
     @Test
     public void testplan2  () throws InterruptedException {
         ms.start("https://edunavi.online/");
-
-
 
         ms.scroll("//h2[@class='heading heading--big-font'][contains(.,'Спецпроект')]");
 

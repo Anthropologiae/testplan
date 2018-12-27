@@ -1,0 +1,6 @@
+..//Как должен выглядеть тест
+
+start : edunavi.online;
+wait : 1000;
+scroll : //h2[@class='heading heading--big-font'][contains(.,'Спецпроект')];
+wait : 1000;
